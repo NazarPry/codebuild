@@ -7,7 +7,7 @@ phases:
       - sudo apt-get update
       - sudo apt-get install -y postgresql-client
   build:
-    commands:ф
+    commands:
       - echo "Setting up database and user..."
       - psql "host=$DB_HOST port=5432 user=$DB_ADMIN_USER password=$DB_ADMIN_PASSWORD dbname=postgres" -f rds_setup.sql
       - psql "host=$DB_HOST port=5432 user=$DB_ADMIN_USER password=$DB_ADMIN_PASSWORD dbname=mydb" -f rds_setup2.sql
