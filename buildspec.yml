@@ -4,7 +4,6 @@ phases:
   install:    
     commands:
       - echo "Installing PostgreSQL client..."
-      - amazon-linux-extras enable postgresql14
       - yum install -y postgresql
   build:
     commands:
